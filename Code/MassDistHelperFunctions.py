@@ -165,16 +165,22 @@ def read_data(loc = '/output/COMPAS_Output_wWeights.h5', rate_key = 'Rates_mu00.
 #     DCO['CH_on_MS(1)']           = File[dcokey]['CH_on_MS(1)'][()]
 #     DCO['CH_on_MS(2)']           = File[dcokey]['CH_on_MS(2)'][()]
 
-    SYS_DCO_seeds_bool           = np.in1d(File[syskey]['SEED'][()], DCO['SEED']) #Bool to point SYS to DCO
-    try: 
-        DCO['Metallicity@ZAMS(1)']   = File[dcokey]['Metallicity@ZAMS(1)'][()] 
-    except:
-        DCO['Metallicity@ZAMS(1)']  = File[syskey]['Stellar_Type@ZAMS(1)'][SYS_DCO_seeds_bool]
+    DCO['Metallicity@ZAMS(1)']   = File[dcokey]['Metallicity@ZAMS(1)'][()] 
+    DCO['Stellar_Type@ZAMS(1)']  = File[dcokey]['Stellar_Type@ZAMS(1)'][()]
+    DCO['Stellar_Type@ZAMS(2)']  = File[dcokey]['Stellar_Type@ZAMS(2)'][()]
+    DCO['Mass@ZAMS(1)']          = File[dcokey]['Mass@ZAMS(1)'][()]
+    DCO['Mass@ZAMS(2)']          = File[dcokey]['Mass@ZAMS(2)'][()]
 
-    DCO['Stellar_Type@ZAMS(1)']  = File[syskey]['Stellar_Type@ZAMS(1)'][SYS_DCO_seeds_bool]
-    DCO['Stellar_Type@ZAMS(2)']  = File[syskey]['Stellar_Type@ZAMS(2)'][SYS_DCO_seeds_bool]
-    DCO['Mass@ZAMS(1)']          = File[syskey]['Mass@ZAMS(1)'][SYS_DCO_seeds_bool]
-    DCO['Mass@ZAMS(2)']          = File[syskey]['Mass@ZAMS(2)'][SYS_DCO_seeds_bool]
+#     SYS_DCO_seeds_bool           = np.in1d(File[syskey]['SEED'][()], DCO['SEED']) #Bool to point SYS to DCO
+#     try: 
+#         DCO['Metallicity@ZAMS(1)']   = File[dcokey]['Metallicity@ZAMS(1)'][()] 
+#     except:
+#         DCO['Metallicity@ZAMS(1)']  = File[syskey]['Stellar_Type@ZAMS(1)'][SYS_DCO_seeds_bool]
+
+#     DCO['Stellar_Type@ZAMS(1)']  = File[syskey]['Stellar_Type@ZAMS(1)'][SYS_DCO_seeds_bool]
+#     DCO['Stellar_Type@ZAMS(2)']  = File[syskey]['Stellar_Type@ZAMS(2)'][SYS_DCO_seeds_bool]
+#     DCO['Mass@ZAMS(1)']          = File[syskey]['Mass@ZAMS(1)'][SYS_DCO_seeds_bool]
+#     DCO['Mass@ZAMS(2)']          = File[syskey]['Mass@ZAMS(2)'][SYS_DCO_seeds_bool]
     
     
     ############################
