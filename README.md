@@ -15,5 +15,5 @@ Templates for the cartoons used in this work can be found in `FormationChannelCa
 Feel free to use and adapt these cartoons to your needs! If you do, please credit this work :) 
 
 <table><tr>
-<td> <img src="/plots/png_versions/FormationChannelCartoons.png" width="500"/> </td>
+<td> <img src="/plots/FormationChannelCartoons.png" width="500"/> </td>
 </tr></table>
